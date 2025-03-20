@@ -77,5 +77,233 @@ The target attribute can have one of the following values:
 
         <h1>HTML Links - Different Colors</h1>
         <p>An HTML link is displayed in a different color depending on whether it has been visited, is unvisited, or is active.</p>
+        <h2>HTML Link Colors</h2>
+        <p>By default, a link will appear like this (in all browsers):</p>
+        <p>- An unvisited link is underlined and blue</p>
+        <p>- A visited link is underlined and purple</p>
+        <p>- An active link is underlined and red</p>
+        <p><b>You can change the link state colors, by using CSS:</b></p>
+        <pre>
+            &lt;style&gt;
+                a:link {
+                  color: green;
+                  background-color: transparent;
+                  text-decoration: none;
+                }
+                
+                a:visited {
+                  color: pink;
+                  background-color: transparent;
+                  text-decoration: none;
+                }
+                
+                a:hover {
+                  color: red;
+                  background-color: transparent;
+                  text-decoration: underline;
+                }
+                
+                a:active {
+                  color: yellow;
+                  background-color: transparent;
+                  text-decoration: underline;
+                }
+                &lt;/style&gt; 
+        </pre>
+        <h2>Link Buttons</h2>
+        <p>A link can also be styled as a button, by using CSS:</p>
+        <pre>
+            &lt;style&gt;
+                a:link, a:visited {
+                  background-color: #f44336;
+                  color: white;
+                  padding: 15px 25px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                }
+                
+                a:hover, a:active {
+                  background-color: red;
+                }
+                &lt;/style&gt; 
+        </pre>
+        <h1>HTML Links - Create Bookmarks</h1>
+        <p>HTML links can be used to create bookmarks, so that readers can jump to specific parts of a web page.</p>
+        <h2>Create a Bookmark in HTML</h2>
+        <p>Bookmarks can be useful if a web page is very long.</p>
+        <p>To create a bookmark - first create the bookmark, then add a link to it.</p>
+        <p>When the link is clicked, the page will scroll down or up to the location with the bookmark.</p>
+        <h2>Example</h2>
+        <p>First, use the id attribute to create a bookmark:</p>
+        <p> <h2 id="C4">Chapter 4</h2></p>
+        <p>Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:</p>
+        <a href="#C4">Jump to Chapter 4</a>
+        <p>You can also add a link to a bookmark on another page:</p>
+        <a href="html_demo.html#C4"> Jump to Chapter 4</a>
+        <p>Excerpts:</p>
+        <p>* Use the id attribute (id="value") to define bookmarks in a page.</p>
+        <p>* Use the href attribute (href="#value") to link to the bookmark.</p>
+        <h1>HTML Images</h1>
+        <p>Images can improve the design and the appearance of a web page.</p>
+        <img src="pic_trulli.jpg" alt="Italian Trulli">
+        <img src="img_girl.jpg" alt="Girl in a jacket">
+        <img src="img_chania.jpg" alt="Flowers in Chania">
+        <h2>HTML Images Syntax</h2>
+        <p>The HTML &lt;img&gt; tag is used to embed an image in a web page.</p>
+        <p>Images are not technically inserted into a web page; images are linked to web pages.</p>
+        <p>The &lt;img&gt; tag creates a holding space for the referenced image.</p>
+        <p>The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.</p>
+        <p>The &lt;img&gt; tag has two required attributes:</p>
+        <p>- src - Specifies the path to the image</p>
+        <p>- alt - Specifies an alternate text for the image</p>
+        <h2>The src Attribute</h2>
+        <p>The required src attribute specifies the path (URL) to the image.</p>
+        <p><b>Note:</b> When a web page loads, it is the browser, at that moment, that gets the image from a web server and</p>
+        <p>inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page,</p>
+        <p>otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.</p>
+        <p></p>
+        <h2>The alt Attribute</h2>
+        <p>The required <b style="color:red">alt</b> attribute provides an alternate text for an image, if the user for some reason</p>
+        <p>cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader.)</p>
+        <br>
+        <p>The value of the <b style="color:red">alt</b> attribute should describe the image:</p>
+        <p>&lt;img src="wrongname.gif" alt="Flowers in Chania"&gt;</p>
+        <br>
+        <p style="background-color:bisque"><b>Tip:</b> A screen reader is a software program that reads the HTML code, and allows the user to "listen" to the content.</p>
+        <p style="background-color:bisque">Screen readers are useful for people who are visually impaired or learning disabled.</p>
+        <br>
+        <h2>Image Size - Width and Height</h2>
+        <p>You can use the <b syle="color:red">style</b> attribute to specify the width and height of an image.</p>
+        <p><b>Example</b></p>
+        <p>&lt;img src="img_girl.jgp" alt="Girl in a jacket" style="width:500px;height:600px&gt;</p>
+        <p>Alternatively, you can use the width and height attributes:</p>
+        <p><b>Example:</b></p>
+        <p>&lt;img src="img_girl.jgp" alt="Girl in a jacket" width="500" height="600"&gt;</p>
+        <p>The <b style="color:red;">width</b> and <b style="color:red;">height</b> attributes always define the width and height of the image in pixels.</p>
+        <p style="background-color: bisque;"><b>Note:</b> Always specify the width and height of an image. If width and height are not specified, the web page might flicker while the image loads.</p>
+        <h2>Width and Height, or Style?</h2>
+        <p>The width, height, and style attributes are all valid in HTML.</p>
+        <p>However, we suggest using the style attribute. It prevents styles sheets from changing the size of images:</p>
+        <pre>
+        <b>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+          &lt;style&gt;
+          img {
+            width: 100%;
+          }
+          &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+
+          &lt;img src="html5.gif" alt="HTML5 Icon" width="128" height="128"&gt;
+
+          &lt;img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"&gt;
+
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </b>
+        </pre>
+        <h2>Images in Another Folder</h2>
+        <p>If you have your images in a sub-folder, you must include the folder name in the <b style="color:red">src</b> attribute:</p>
+        <p><b>Example:</b></p>
+        <p><b>&lt;img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"&gt;</b></p>
+        <br>
+        <h3>Images on Another Server/Website</h3>
+        <p>Some web sites point to an image on another server.</p>
+        <p>To point to an image on another server, you must specify an absolute (full) URL in the src attribute:</p>
+        <h3>Example</h3>
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+        <p><b>Notes on external images:</b> External images might be under copyright. If you do not get permission to use it, </p>
+        <p>you may be in violation of copyright laws. In addition, you cannot control external images; they can suddenly</p>
+        <p>be removed or changed.</p>
+        <h2>Animated Images</h2>
+        <p>HTML allows animated GIFs:</p>
+        <h3>Example</h3>
+        <img src="programming.gif" alt="Computer Man" style="width: 48px; height: 48px;">
+        <h3>Image as a Link</h3>
+        <p>To use an image as a link, put the &lt;img&gt; tag inside the &lt;a&gt; tag:</p>
+        <pre>
+          &lt;a href="default.asp"&gt;
+          &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"&gt;
+          </a> 
+        </pre>
+        <h2>Image Floating</h2>
+        <p>Use the CSS <b style="color:red;">float</b> property to let the image float to the right or to the left of a text:</p>
+        <h3>Example</h3>
+        <p><img src="smiley.gif" alt="Smiley face" style="float:right; width:42px; height:42px"></p>
+        <p><img src="smiley.gif" alt="Smiley face" style="float:left; width:42px; height:42px"></p>
+        <p><b>Tip:</b> to learn more about CSS Float, read our CSS Float Tutorial.</p>
+        <h3>Common Image Formats</h3>
+        <p>Here are the most common image file types, which are supported in all browsers (Chrome, Edge, Firefox, Safari, Opera):</p>
+        <pre>
+          Abbreviation 	    File Format 	                              File Extension
+          APNG 	            Animated Portable Network Graphics 	        .apng
+          GIF 	            Graphics Interchange Format 	              .gif
+          ICO 	            Microsoft Icon 	                            .ico, .cur
+          JPEG 	            Joint Photographic Expert Group image 	    .jpg, .jpeg, .jfif, .pjpeg, .pjp
+          PNG 	            Portable Network Graphics 	                .png
+          SVG 	            Scalable Vector Graphics 	                  .svg
+        </pre>
+        <h2>Chapter Summary</h2>
+        <p>- Use the HTML <b style="color:red;">&lt;img&gt;</b> element to define an image</p>
+        <p>- Use the HTML <b style="color:red;">src</b> attribute to define the URL of the image</p>
+        <p>- Use the HTML <b style="color:red;">alt</b> attribute to define an alternate text for an image, if it cannot be displayed</p>
+        <p>- Use the HTML <b style="color:red;">width</b> and <b style="color:red;">height</b> attributes or the CSS <b style="color:red;">width</b> and <b style="color:red;">height</b> properties to define the size of the image</p>
+        <p>- Use the CSS <b style="color:red;">float</b> property to let the image float to the left or to the right</p>
+        <h1>HTML Image Maps</h1>
+        <h2>Image Maps</h2>
+        <p>The HTML <b style="color:red;">&lt;map&gt;</b> tag defines an image map. An image map is an image with clickable areas.</p>
+        <p>The areas are defined with one or more <b style="color:red;">&lt;area&gt;</b> tags</p>
+        <p>Try to click on the computer, phone, or the cup of coffee in the image below:</p>
+
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+          <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+          <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map> 
+        <h2>How Does it work?</h2>
+        <p>The idea behind an image map is that you should be able to perform different actions depending on where in the image you click.</p>
+        <br>
+        <p>To create an image map you need an image, and some HTML code that describes the clickable areas.</p>
+        <br>
+        <br>
+        <h2>The Image</h2>
+        <p>The image is inserted useing the <b style="color:red">&lt;img&gt;</b> tag. The only difference from other images is that you must add</p>
+        <p>a <b style="color:red">usemap</b> attribute:</p>
+        <pre>
+          
+        &lt;img src="workplace.jpg" alt="Workplace" usemap="#workmap"&gt;
+
+        </pre>
+        <br>
+        <h2>Create Image Map</h2>
+        <p>Then, add a <b style="color:red;">&lt;map&gt;</b> element.</p>
+        <p>The <b style="color:red;">&lt;map&gt;</b> element is used to create an image map, and is linked to the image by using the required <b style="color:red">name</b> attribute:</p>
+        <p>&lt;map name="workmap"&gt;</p>
+        <br>
+        <p>The <b style="color:red">name</b> attribute must have the same value as the <b style="color:red;"><img>'s</b> <b style="color:red;">usemap</b> attribute</p>
+        <h2>The Areas</h2>
+        <p>Then, add the clickable areas.</p>
+        <br>
+        <p>A clickable area is defined using an <b style="color:red">&lt;area&gt;</b> element.</p>
+        <h2>Shape</h2>
+        <p>You must define the shape of the clickable area, and you can choose one of these values:</p>
+        <p>* <b style="color:red">rect</b> - defines a reactangular region</p>
+        <p>* <b style="color:red">circle</b> - defines a circular region</p>
+        <p>* <b style="color:red">poly</b> - defines a polygonal region</p>
+        <p>* <b style="color:red">default</b> - defines the entire region</p>
+        <br>
+        <p>You must also define some coordinates to be able to place the clickable area onto the image.</p>
+        <h2>Shape="rect"</h2>
+        <p>The coordinates for <b style="color:red">shape="rect"</b> come in pairs, one for the x-axis and one for the y-axis.</p>
+        
+
+
+
     </body>
 </html>
