@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+        <h2>Example</h2>
+        <img src="img_example_table.png">
+        <h2>Define an HTML Table</h2>
+        <p>A table in HTML consists of table cells inside rows and columns.</p>
+        <h3>Example</h3>
+        <p>A simple HTML table:</p>
+        <pre>
+            &lt;table>
+                &lt;tr>
+                    &lt;th>Company&lt;/th>
+                    &lt;th>Contact&lt;/th>
+                    &lt;th>Country&lt;/th>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>Alfreds Futterkiste&lt;/td>
+                    &lt;td>Maria Anders&lt;/td>
+                    &lt;td>Germany&lt;/td>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>Centro comercial Moctezuma&lt;/td>
+                    &lt;td>Francisco Chang&lt;/td>
+                    &lt;td>Mexico&lt;/td>
+                &lt;/tr>
+            &lt;/table>
+        </pre>
+        <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+          </table> 
+
+        <h2>Table Cells</h2>
+        <p>Each table cell is defined by a &lt;td> and a &lt;/td></p>
+        <p><b style="color:red">td</b> stands for table data.</p>
+        <p>Everything between b style="color:red">&lt;td></b> and <b style="color:red">&lt;/td></b> is the content of a table cell.</p>
+        <h3>Example</h3>
+        <pre>
+            &lt;table>
+                &lt;tr>
+                    &lt;td>Emil</td>
+                    &lt;td>Tobias</td>
+                    &lt;td>Linus</td>
+                &lt;/tr>
+            &lt;/table> 
+        </pre>
+        <table>
+            <tr>
+              <td>Emil</td>
+              <td>Tobias</td>
+              <td>Linus</td>
+            </tr>
+          </table> 
+          <h2>Table Rows</h2>
+          <p>Each table row starts with a &lt;tr> and ends with a &lt;/tr> tag.</p>
+          <p><b style="color:red">tr</b> stands for table row.</p>
+        <br>
+        <h3>Example</h3>
+        <pre>
+            &lt;table>
+                &lt;tr>
+                    &lt;td>Emil</td>
+                    &lt;td>Tobias</td>
+                    &lt;td>Linus</td>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>16&lt;/td>
+                    &lt;td>14&lt;/td>
+                    &lt;td>10&lt;/td>
+                    &lt;/tr>
+                &lt;/table> 
+        </pre>
+        <p>You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.</p>
+        <p><b>Note:</b> There are times when a row can have less or more cells than another. You will learn about that in a later chapter.</p>
+        <h3>Table Headers</h3>
+        <p>Sometimes you want your cells to be table header cells. In those cases use the <b>&lt;th></b> tag instead of the <b>&lt;td></b> tag:</td></p>
+        <p><b style="color:red">th</b> stands for table header.</p>
+        <h3>Example</h3>
+        <p>Let the first row be table header cells:</p>
+        <pre>
+            &lt;table>
+                &lt;tr>
+                    &lt;th>Person 1&lt;/th>
+                    &lt;th>Person 2&lt;/th>
+                    &lt;th>Person 3&lt;/th>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>Emil&lt;/td>
+                    &lt;td>Tobias&lt;/td>
+                    &lt;td>Linus&lt;/td>
+                &lt;/tr>
+                &lt;tr>
+                    &lt;td>16&lt;/td>
+                    &lt;td>14&lt;/td>
+                    &lt;td>10&lt;/td>
+                &lt;/tr>
+            &lt;/table> 
+        </pre>
+        <table>
+            <tr>
+              <th>Person 1</th>
+              <th>Person 2</th>
+              <th>Person 3</th>
+            </tr>
+            <tr>
+              <td>Emil</td>
+              <td>Tobias</td>
+              <td>Linus</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>14</td>
+              <td>10</td>
+            </tr>
+          </table> 
+          <p>By default, the text in the <b style="color:red">&lt;th></b> elements are bold and centered, but you can change that with CSS></p>
+          <h3>HTML Table Tags</h3>
+          <table>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>&lt;table></td>
+                <td>Defines a table</td>
+            </tr>
+            <tr>
+                <td>&lt;th></td>
+                <td>Defines a header cell in a table</td>
+            </tr>
+            <tr>
+                <td>&lt;tr></td>
+                <td>Defines a row in a table</td>
+            </tr>
+            <tr>
+                <td>&lt;td></td>
+                <td>Defines a cell in a table</td>
+            </tr>
+            <tr>
+                <td>&lt;caption></td>
+                <td>Defines a table caption</td>
+            </tr>
+            <tr>
+                <td>&lt;colgroup></td>
+                <td>Specifies a group of one or more columns in a table for formatting</td>
+            </tr>
+            <tr>
+                <td>&lt;col></td>
+                <td>Specifies column properties for each column within a &lt;colgroup> element</td>
+            </tr>
+            <tr>
+                <td>&lt;thead></td>
+                <td>Groups the header content in a table</td>
+            </tr>
+            <tr>
+                <td>&lt;tbody></td>
+                <td>Groups the body content in a table</td>
+            </tr>
+            <tr>
+                <td>&lt;tfoot></td>
+                <td>Groups the footer content in a table</td>
+            </tr>
+          </table>
+          <br>
+          <h1>HTML Table Borders</h1>
+          <p>HTML tables can have borders of different styles and shapes.</p>
+          <h2>How to Add a Border</h2>
+          <p>To add a border, use the CSS <b style="color:red;">border</b> property on <b style="color:red;">table</b>, <b style="color:red;">th</b>, and <b style="color:red;">td</b> elements:</p>
+          <p>Example:</p>
+          <pre>
+            table, th, td {
+            border: 1px solid black;
+            }
+          </pre>
+          <h2>Collapsed Table Borders</h2>
+          <p>To avoid having double borders like in the example above, set the CSS <b style="color:red">border-collapse</b> property to <b style="color:red;">collapse</b>.</p>
+          <p>This will make the borders collapse into a single border:</p>
+          
+    </body>
+</html>
