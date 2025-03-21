@@ -301,7 +301,180 @@ The target attribute can have one of the following values:
         <p>You must also define some coordinates to be able to place the clickable area onto the image.</p>
         <h2>Shape="rect"</h2>
         <p>The coordinates for <b style="color:red">shape="rect"</b> come in pairs, one for the x-axis and one for the y-axis.</p>
+        <br><p> So, the coordinates 34,44 is located 34 pixels from the left margin and 44 pixels from the top:</p>
+        <p>The coordinates 270.350 is located 270 pixels from the left margin and 350 pixels from the top:</p>
+        <p>Now we have enough data to create a clickable rectangular area:</p>
+        <h4>example</h4>
+        <br>
+        <p> &lt;area shape="rect" coords="34, 44, 270, 350" href="computer.htm"&gt; </p>
+        <p>This is the area that becomes clickable and will send the user to the page "computer.html":</p>
+        <img src="workplace_rectangle.jpg" alt="active area rectangle">
+        <h3>Shape="circle"</h3>
+        <p>To add a circle area, first locate the coordinates of the center of the circle:</p>
+        <p>337,300</p>
+        <img src="workplace_circle1.jpeg">
+        <p>Then specify the radius of the circle:</p>
+        <p>44 pixels</p>
+        <img src="workplace_circle2.jpeg">
+        <p>Now you have enough data to create a clickable circular area:</p>
+        <h3>Examle</h3>
+        <pre><area shape="circle" coords="337, 300, 44" href="coffee.htm"></pre>
+        <p>This is the area that becomes clickable and will send the user to the page "coffee.htm":</p>
+        <h2>Shape="poly"</h2>
+        <p>The <b style="color:red;">shape="poly"</b> contains several coordinate points, which creates a shape formed with straight lines (a polygon).</p>
+        <p>This can be used to create any shape.</p>
+        <p>Like maybe a croissant shape!</p>
+        <p>How can we make the croissant in the image below become a lickable link?</p>
+        <img src="frenchfood.jpg" alt="croissant">
+        <p>We have to find the x and y coordinates for all edges of the croissant:</p>
+        <img src="frenchfood2.jpg" alt="croissant">
+        <p>The coordinates come in pairs, one for the x-axis and one for the y-axis:</p>
+        <h3>Example</h3>
+        <p> &lt;area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm"&gt; </p>
+        <p>This is the area that becomes clickable and will sent the user to the page "croissant.htm"</p>
+        <img src="frenchfood3.jpg" alt="croissant">
+        <h2>Image Map and JavaScript</h2>
+        <p>A clickable area can also trigger a JavaScript function.</p>
+        <p>Add a click event to the &lt;area&gt; element to execute a JavaScript function:</p>
+        <h3>Example</h3>
+        <p>Here, we use the onclick attribute to execute a JavaScript function when the area is clicked:</p>
+        <pre>
+          &lt;map name="workmap"&gt;
+          &lt;area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()"&gt;
+          &lt;/map&gt;
+          
+          &lt;script&gt;
+          function myFunction() {
+            alert("You clicked the coffee cup!");
+          }
+          &lt;/script&gt; 
+        </pre>
+        <h2>Chapter Summary</h2>
+        <p>* Use the HTML <b style="color:red;">&lt;map&gt;</b> element to define an image map</map></p>
+        <p>* Use the HTML <b style="color:red;">&lt;area&gt;</b> element to define the clickable areas in the image map</p>
+        <p>* Use the HTML usemap attribute of the <b style="color:red;">&lt;img&gt;</b> element to point to an image map</p>
+
+        <br>
+        <h1>HTML Background Images</h1>
+        <p>A background iamge can be specified for almost any HTML element.</p>
+        <h2>Background Image on an HTML element</h2>
+        <p>To add a background image on an HTML element, use the HTML style attribute and the CSS background-image property:</p>
+        <h3>Example</h3>
+        <p>Add a background image on a HTML element:</p>
+        <p>&lt;p style="background-image: url('img_girl.jpg');"&gt;</p>
+        <br>
+        <p>You can also specify the background image in the <b style="color:red;">&lt;style&gt;</b> element, in the <b style="color:red;">&lt;head&gt;</b> section:</p>
+        <h3>Example</h3>
+        <p>Specify the background image in the <b style="color:red;">&lt;style&gt;</b> element:</p>
+        <pre>
+          &lt;style&gt;
+            p {
+              background-image: url('img_girl.jpg');
+            }
+            &lt;/style&gt; 
+        </pre>
+        <h3>Background Image on a Page</h3>
+        <p>If you want the entire page to have a background image, you must specify the background image on the <b style="color:red;">&lt;body&gt;</b> element:</p>
+        <h4>Example</h4>
+        <p>Add a background image for the entire page:</p>
+        <pre>
+          &lt;style&gt;
+          body {
+            background-image: url('img_girl.jpg');
+          }
+          &lt;/style&gt; 
+        </pre>
+        <h3>Background Repeat</h3>
+        <p>If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element:</p>
+        <img src="bg-image-example.jpeg" alt="background image example">
+        <h4>Example:</h4>
+        <pre>
+          &lt;style&gt;
+          body {
+            background-image: url('img_girl.jpg');
+          }
+          &lt;/style&gt; 
+        </pre>
+        <p> To avoid the background image from repeating itself, set the <b style="color:red">background-repeat</b> property to <b style="color:red">no-repeat.</b></p>
+        <h4>Example:</h4>
+        <pre>
+          &lt;style&gt;
+          body {
+            background-image: url('example_img_girl.jpg');
+            background-repeat: no-repeat;
+          }
+          &lt;/style&gt; 
+        </pre>
+        <h3>Background Cover</h3>
+        <p>If you want the bacgkround image to cover the entire element, you can set the <b style="color:red">background-size</b> property to <b style="color:red">cover</b>.</p>
+        <p>Also, to make sure the entire element is always covered, set the <b style="color:red">background-attachment</b> property to <b style="color:red">fixed:</b></p>
+        <p>This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions):</p>
+        <h4>Example</h4>
+        <pre>
+          &lt;style&gt;
+          body {
+            background-image: url('img_girl.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+          &lt;/style&gt; 
+        </pre>        
+        <h3>Background Stretch</h3>
+        <p>If you want the background image to stretch to fit the entire element, you can set the <b style="color:red">background-size</b> property to <b style="color:red">100% 100%</b>:</p>
+
+        <h4>Example</h4>
+        <pre>
+          &lt;style&gt;
+          body {
+            background-image: url('img_girl.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+          }
+          &lt;/style&gt; 
+        </pre>
+        <h1>HTML &lt;picture&gt; Element</h1>
+        <p>The HTML &lt;picture&gt; element allows you to display different pictures for different devices or screen sizes.</p>
+        <img src="picture_example.jpg">
+        <h2>The HTML &lt;picture&gt; Element</h2>
+        <p>The HTML &lt;picture&gt; element gives web developers more flexibility in specifying image resources.</p>
+        <p>The &lt;picture&gt; element contains one or more &lt;source&gt; elements, each referring to different images through the &lt;srcset&gt; attribute.</p>
+        <p>This way the browser can choose the image that best fits the current view and/or device.</p>
+        <p>Each &lt;source&gt; element had a &lt;media&gt; attribute that defines when the image is the most suitable.</p>
+        <h3>Example</h3>
+        <p>Show different images for different screen sizes:</p>
+        <pre>
+          &lt;picture&gt;
+          &lt;source media="(min-width: 650px)" srcset="img_food.jpg"&gt;
+          &lt;source media="(min-width: 465px)" srcset="img_car.jpg"&gt;
+          &lt;img src="img_girl.jpg"&gt;
+          &lt;/picture&gt; 
+        </pre>
+        <p><b>Note:</b> Always specify an &lt;img&gt; element as the last child element of the &lt;picture&gt; element.</p>
+        <p>The &lt;img&gt; element is used by browsers that do not support the &lt;picture&gt; element, or if none of the &lt;source&gt; tags match.</p>
+
+        <h2>When to use the Picture Element</h2>
+        <p>There are two main purposes for the <picture> &lt;element&gt;:</p>
+        <h3>1. Bandwidth</h3>
+        <p>If you have a small screen or device, it is not necessary to load a large image file. The browser will use the first</p>
+        <p>&lt;source&gt; element with matching attribute values, and ignore any of the following elements.</p>
+        <h3>2. Format Support</h3>
+        <p>Some browsers or devices may not support all image formats. By using the <picture> element, you can add images of all formats and the browser will use the first format it rcognizes, and ignore any of the following elements.</p>
+        <h3>Example</h3>
+        <p>The browser will use the first image it recognizes:</p>
+        <pre>
+          &lt;picture&gt;
+            &lt;source srcset="img_avatar.png"&gt;
+            &lt;source srcset="img_girl.jpg"&gt;
+            &lt;img src="img_beatles.gif" alt="Beatles" style="width:auto;"&gt;
+            &lt;/picture&gt;
+        </pre>
+        <p><b>Note:</b> The browser will use the first &lt;source&gt; element with matching attribute values, and ignore any following &lt;source&gt; elements.</p>
+
         
+
+
 
 
 
