@@ -190,6 +190,224 @@
           <h2>Collapsed Table Borders</h2>
           <p>To avoid having double borders like in the example above, set the CSS <b style="color:red">border-collapse</b> property to <b style="color:red;">collapse</b>.</p>
           <p>This will make the borders collapse into a single border:</p>
+          <pre>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+              }
+          </pre>
+          <h2>Style Table Borders</h2>
+          <p>If you set a background color of each cell, and give the border a white color (the same as the document background), you get the impresion of an invisible border:</p>
+          <pre>
+            table, th, td {
+                border: 1px solid white;
+                border-collapse: collapse;
+              }
+              th, td {
+                background-color: #96D4D4;
+              }
+          </pre>
+          <h2>Round Table Borders</h2>
+          <p>With the <b style="color:red">border-radius</b> property, the borders get rounded corners:</p>
+          <p>
+            <pre>
+                table, th, td {
+                    border: 1px solid black;
+                    border-radius: 10px;
+                  }
+            </pre>
+          </p>
+          <p>Skip the border around the table by leaving out table from the css selector:</p>
+          <pre>
+            th, td {
+                border: 1px solid black;
+                border-radius: 10px;
+              }
+          </pre>
+          <h2>Dotted Table Borders</h2>
+          <p>With the <b style="color:red">border-style</b> property, you can set the appearance of the border.</p>
+          <p>The following values are allowed:</p>
+          <pre>
+            dotted     
+            dashed     
+            solid     
+            double     
+            groove     
+            ridge     
+            inset     
+            outset     
+            none     
+            hidden    
+          </pre>
+          <h3>Example:</h3>
+          <pre>
+            th, td {
+                border-style: dotted;
+              }
+          </pre>
+          <h2>Border color</h2>
+          <p>With <b style="color:red">border-color</b> property, you can set the color of the border.</p>
+          <pre>
+            th, td {
+                border-color: #96D4D4;
+              }
+          </pre>
+          <h1>HTML Table Sizes</h1>
+          <p>HTML table can have different sizes for each column, row or the entire table.</p>
+          <p>Use the <b style="color:red">style</b> attribute with the <b style="color:red">width</b> or <b style="color:red">height</b> properties to specify the size of a table, row or column.</p>
+          <h2>HTML Table Width</h2>
+          <p>To set the width of a table, add the <b style="color:red">style</b> attribute to the <b style="color:red">table</b> element:</p>
+          <h4>Example</h4>
+          <p>Set the width of the table to 100%:</p>
+          <pre>
+            &lt;table style="width:100%">
+                &lt;tr>
+                    &lt;th>Firstname&lt;/th>
+                    &lt;th>Lastname&lt;/th>
+                    &lt;th>Age&lt;/th>
+                &lt;/tr>
+                &lt;tr>
+                &lt;td>Jill&lt;/td>
+                &lt;td>Smith&lt;/td>
+                &lt;td>50&lt;/td>
+                &lt;/tr>
+                &lt;tr>
+                &lt;td>Eve&lt;/td>
+                &lt;td>Jackson&lt;/td>
+                &lt;td>94&lt;/td>
+                &lt;/tr>
+            &lt;/table> 
+          </pre>
+          <p style="background-color:yellow;">Note: Using a percentage as the size unit for a width means how wide will this element be compared to its parent element, which in this case is the &lt;body> element.</p>
+          <h2>HTML Table Row Height</h2>
+          <p>To set the height of a specific row, add the <b style="color:red;">style</b> attribute on a table row element:</p>
+          <h4>Example</h4>
+          <p>Set the height of the second row to 200 pixels:</p>
+          <pre>
+            &lt;table style="width:100%">
+            &lt;tr>
+              &lt;th>Firstname&lt;/th>
+              &lt;th>Lastname&lt;/th>
+              &lt;th>Age&lt;/th>
+              &lt;/tr>
+              &lt;tr style="height:200px">
+                &lt;td>Jill&lt;/td>
+                &lt;td>Smith&lt;/td>
+                &lt;td>50&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>Eve&lt;/td>
+                &lt;td>Jackson&lt;/td>
+                &lt;td>94&lt;/td>
+              &lt;/tr>
+            &lt;/table> 
+          </pre>
+          <h1>HTML Table Headers</h1>
+          <p>HTML tables can have headers for each column or row, or for many columns/rows.</p>
+          <h2>HTML Table Headers</h2>
+          <p>Table headers are defined with <b style="color:red;">th</b> elements. Each <b style="color:red">th</b> element represents a table cell.</p>
+          <h4>Example</h4>
+          <pre>
+            &lt;table>
+            &lt;tr>
+              &lt;th>Firstname&lt;/th>
+              &lt;th>Lastname&lt;/th>
+              &lt;th>Age&lt;/th>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>Jill&lt;/td>
+                &lt;td>Smith&lt;/td>
+                &lt;td>50&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>Eve&lt;/td>
+                &lt;td>Jackson&lt;/td>
+                &lt;td>94&lt;/td>
+              &lt;/tr>
+              &lt;/table> 
+          </pre>
+          <h2>Vertical Table Headers</h2>
+          <p>To use the first column as table headers, define the first cell in each row as a <b style="color:red;">&lt;th></b> element:</p>
+          <h3>Example</h3>
+          <pre>
+            &lt;table>
+              &lt;tr>
+                &lt;th>Firstname&lt;/th>
+                &lt;td>Jill&lt;/td>
+                &lt;td>Eve&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;th>Lastname&lt;/th>
+                &lt;td>Smith&lt;/td>
+                &lt;td>Jackson&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;th>Age&lt;/th>
+                &lt;td>94&lt;/td>
+                &lt;td>50&lt;/td>
+              &lt;/tr>
+            &lt;/table> 
+          </pre>
+
+          <h2>Align Table Headers</h2>
+          <p>By default, table headers are bold and centered:</p>
+          <p>To left-align the table headers, use the CSS <b style="color:red;">text-align</b> property:</p>
+          <h4>Example</h4>
+          <pre>
+            th {
+              text-align: left;
+            }
+          </pre>
+          <h2>Header for Multiple Columns</h2>
+          <p>You can have a header that spans over two or more columns.</p>
+          <p>To do this, use the <b style="color:red">colspan</b> attribute on the <b style="color:red">&lt;th></b> element:</p>
+          <h4>Example</h4>
+          <pre>
+            &lt;table>
+              &lt;tr>
+                &lt;th colspan="2">Name&lt;/th>
+                &lt;th>Age&lt;/th>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>Jill&lt;/td>
+                &lt;td>Smith&lt;/td>
+                &lt;td>50&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>Eve&lt;/td>
+                &lt;td>Jackson&lt;/td>
+                &lt;td>94&lt;/td>
+              &lt;/tr>
+              &lt;/table> 
+          </pre>
+          <p style="background-color:bisque; color:black;">You will learn more about colspan and rowspan in the Table colspan and rowspan chapter.</p>
+          <h2>Table Caption</h2>
+          <p>You can add a caption that serves as a heading for the entire table.</p>
+          <p>To add a caption to a table, use the<b style="color:red;">&lt;caption></b> tag:</p>
+          <h3>Example</h3>
+          <pre>
+            &lt;table style="width:100%">
+              &lt;caption>Monthly savings&lt;/caption>
+              &lt;tr>
+                &lt;th>Month&lt;/th>
+                &lt;th>Savings&lt;/th>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>January&lt;/td>
+                &lt;td>$100&lt;/td>
+              &lt;/tr>
+              &lt;tr>
+                &lt;td>February&lt;/td>
+                &lt;td>$50&lt;/td>
+              &lt;/tr>
+            &lt;/table> 
+          </pre>
+          <p style="background-color:bisque;"><b style="color:black;">Note:</b> the <b style="color:red'">&lt;caption></b> tag should be inserted immediately after the <b style="color:red'">&lt;table</b> tag.</p>
+
+          <h1>HTML Table Padding and Spacing</h1>
+          <p>HTML tables can adjust the padding inside the cells, and also the space between the cells.</p>
+          
+
           
     </body>
 </html>
