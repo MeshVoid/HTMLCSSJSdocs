@@ -266,7 +266,12 @@ h1, h2, p {
 
 ### ALL CSS simple selectors
 
-| Column 1      | Column 2      |   Column 3   |
+| Selector   |  	Example  |  	Example description  |
 | ------------- | ------------- | ------------- |
-| Cell 1, Row 1 | Cell 2, Row 1 |  |
-| Cell 1, Row 2 | Cell 1, Row 2 | |
+| #id           | #firstname    | Selects the element with id="firstname" |
+| .class        | .intro | Selects all elements with class="intro"|
+| *       |  	*| Selects all elements|
+| element      |  	p | Selects all <p> elements|
+| element,element,..        | div, p | Selects all <div> elements and all <p> elements|
+
+
